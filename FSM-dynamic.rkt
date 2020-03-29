@@ -62,7 +62,7 @@
     (define-values (EXPRESSION_LIST TEMP_BR TEMP_OR JUMP) (values empty empty empty empty))
     (let LOOP [   (S EXPRESSION)     (TEMP empty)     (PAR 1)     (OR 0)    (OR2 empty)    ]
         ;(displayln (~a "par"PAR "  " "or"OR "   " "temp"TEMP "       " "tempBr"TEMP_BR "       " "tempOr"TEMP_OR "    OORR2" S) )
-        (cond ;-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - END OR CORRECTIONS -  -  -  -  -  -  -  -  -  -  -  -   
+        (cond ;-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - END or CORRECTIONS -  -  -  -  -  -  -  -  -  -  -  -   
             [   (or (and(empty? S) (< OR 1))                          (equal? "|" (if (not(empty? S))(last S)empty))
                     (equal? "+"(if (not(empty? S))(first S)empty))    (equal? "*"(if (not(empty? S))(first S)empty))
                     (and(equal?"|"(if (>(length S)2)(second S)empty)) (or (equal? ")" (third S)) (equal? "+" (third S)) (equal? "*" (third S)) ))
